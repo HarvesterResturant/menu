@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harvester Restaurant</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Harvester Restaurant</h1>
+    <h2>Our Menu</h2>
+    <p>Discover our delicious offerings</p>
+  </header>
+  <main>
+    <div class="menu-gallery">
+      <div class="menu-item">
+        <img src="images/menu1.jpg" alt="Menu 1">
+      </div>
+      <div class="menu-item">
+        <img src="images/menu2.jpg" alt="Menu 2">
+      </div>
+      <div class="menu-item">
+        <img src="images/menu3.jpg" alt="Menu 3">
+      </div>
+      <div class="menu-item">
+        <img src="images/menu4.jpg" alt="Menu 4">
+      </div>
+    </div>
+  </main>
+  <div class="card-container">
+    <!-- Payment Section -->
+    <div class="card payment-card">
+      <h2>Pay Your Bill</h2>
+      <a href="payment.html" class="qr-btn">Pay Now</a>
+    </div>
+
+    <!-- Review Section (unchanged) -->
+    <div class="card review-card">
+      <section class="review-section">
+        <h2>Leave a Review</h2>
+        <form class="review-form" id="reviewForm">
+          <label for="customer-name">Name:</label>
+          <input type="text" id="customer-name" name="customer-name" required>
+
+          <label for="customer-review">Your Review:</label>
+          <textarea id="customer-review" name="customer-review" rows="4" required></textarea>
+
+          <label>Rating:</label>
+          <div class="star-rating">
+            <input type="radio" id="star5" name="rating" value="5" required /><label for="star5" title="5 stars">&#9733;</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 stars">&#9733;</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 stars">&#9733;</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 stars">&#9733;</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star">&#9733;</label>
+          </div>
+
+          <button type="submit">Submit Review</button>
+        </form>
+        <div id="thankYouMessage" class="thank-you-message" style="display:none;">
+          Thank you for visiting our restaurant!
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Harvester Restaurant</p>
+    <p style="margin-top:1.5rem;">Yangal Mall, Kathmandu, Nepal<br>Contact: +977 9763690481, 01-592348</p>
+
+  </footer>
+  <script>
+    document.getElementById('reviewForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('reviewForm').style.display = 'none';
+      document.getElementById('thankYouMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

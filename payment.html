@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Harvester Restaurant</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      margin: 0;
+    }
+    .payment-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      padding: 2rem;
+      text-align: center;
+    }
+    .qr-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .qr-code {
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2541b2;
+      margin-bottom: 1.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+    }
+    .payment-info {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .payment-info p {
+      margin: 0.5rem 0;
+      font-size: clamp(0.9rem, 2vw, 1rem);
+      color: #555;
+    }
+    .payment-info strong {
+      color: #2541b2;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #fff3cd;
+      border-radius: 6px;
+    }
+    @media (max-width: 900px) {
+      .payment-container {
+        margin: 1.5rem auto;
+        padding: 1.5rem;
+      }
+      .qr-code {
+        max-width: 250px;
+      }
+    }
+    @media (max-width: 480px) {
+      .payment-container {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      .qr-code {
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-container">
+    <h1>Payment Options</h1>
+    <div class="qr-section">
+      <h2>Scan QR Code to Pay</h2>
+      <img src="images/qr.jpg" alt="Payment QR Code" class="qr-code">
+      <div class="payment-info">
+        <p><strong>PlatformName:</strong> Esewa</p>
+        <p><strong>Account Name:</strong> Harvester Restaurant</p>
+        <p><strong>Account Number:</strong> 9763690481</p>
+      </div>
+    </div>
+    <div class="note">
+      Please scan the QR code using your mobile app to make the payment. After payment, please show the confirmation to our staff.
+    </div>
+  </div>
+</body>
+</html>
